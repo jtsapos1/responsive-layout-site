@@ -91,7 +91,7 @@ img {
 	color: #fff;
 	background: #3acec2;
 	padding: 3.2em 0;
-	margin-bottom: 48px;
+	margin: auto;
 }
 
 .col {
@@ -149,7 +149,7 @@ img {
   Media Queries to adjust devices for wider screens and devices using flexbox properties.
 ==================================== */
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 
 	.main-header,
 	.main-nav,
@@ -163,20 +163,29 @@ img {
 	}
 
 	.col {
-		flex: 1;
+		flex: 1 50%;
 	}
 
-}
-
-@media (min-width: 1025px) {
-
-	.main-header {
-		flex-direction: row;
-		justify-content: space-between;
+	.row {
+		flex-wrap: wrap;
 	}
 
-	.primary {
-		flex: 2;
+	.portfolio {
+		margin: center;
+
 	}
 
+	@media (min-width: 1024px) {
+
+		.main-header {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.col {
+			flex-basis: 50%;
+
+		}
+
+	}
 }
