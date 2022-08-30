@@ -10,6 +10,9 @@ html {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	margin: 0;
 	padding: 0;
 	text-align: center;
@@ -17,6 +20,10 @@ body {
 	line-height: 1.6;
 	color: #3a3a3a;
 	background-color: #fff
+}
+
+.row {
+	flex: 1;
 }
 
 ul {
@@ -114,7 +121,7 @@ img {
 /* ---- Page Elements ---- */
 
 .logo {
-	width: 190px;
+	width: 300px;
 }
 
 .headline {
@@ -123,6 +130,11 @@ img {
 
 .feat-img {
 	border-radius: 5px;
+}
+
+.tagline {
+	text-align: center;
+	padding: 3px 3px;
 }
 
 /* ================================= 
@@ -179,7 +191,18 @@ img {
 
 	.portfolio {
 		margin: center;
+	}
 
+	.logo {
+		float: right;
+		width: 350px;
+		padding-right: 35px;
+	}
+
+	.tagline {
+		text-align: left;
+		padding: 0px 100px 1000px 10px;
+		border: 0;
 	}
 
 	@media (min-width: 1024px) {
@@ -192,6 +215,23 @@ img {
 
 		.col {
 			flex-basis: 30%;
+		}
+
+		.tagline {
+			text-align: left;
+			padding: 0px 100px 200px 200px;
+		}
+
+		.banner {
+			width: 100vw;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.logo {
+			float: right;
+			width: 350px;
+			padding-right: 70px;
 		}
 
 	}
