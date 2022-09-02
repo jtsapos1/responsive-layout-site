@@ -68,7 +68,8 @@ img {
 
 /* ---- Navigation ---- */
 
-.name {
+.name,
+.name-bottom {
 	font-size: 1.35em;
 	margin: 0;
 }
@@ -77,14 +78,21 @@ img {
 	margin-top: 5px;
 }
 
+.bottom-nav {
+	margin-top: 5px;
+}
+
 .name a,
-.main-nav a {
+.name-bottom,
+.main-nav a,
+.bottom-nav a {
 	text-align: center;
 	display: block;
 	padding: 10px 15px;
 }
 
-.main-nav a {
+.main-nav a,
+.bottom-nav a {
 	font-size: .95em;
 	color: #093a58;
 	text-transform: uppercase;
@@ -176,6 +184,33 @@ img {
 	}
 }
 
+@media (max-width: 768px) {
+
+	li {
+		display: block;
+		background: #d9e4ea;
+
+	}
+
+	.bottom-nav {
+		display: none;
+	}
+
+	.name-bottom {
+		margin-right: 175px;
+	}
+
+	#Back {
+		display: flex;
+		visibility: visible;
+		margin-top: 17px;
+		margin-inline-end: 5px;
+		justify-content: space-between;
+		text-transform: uppercase;
+	}
+
+}
+
 /* ================================= 
   Media Queries to adjust devices for wider screens and devices using flexbox properties.
 ==================================== */
@@ -184,8 +219,13 @@ img {
 
 	.main-header,
 	.main-nav,
+	.bottom-nav,
 	.row {
 		display: flex;
+	}
+
+	.main-footer {
+		justify-content: space-around;
 	}
 
 	.main-header {
@@ -228,6 +268,10 @@ img {
 		padding-right: 22%;
 	}
 
+	#Back {
+		visibility: hidden;
+	}
+
 
 	@media (min-width: 1024px) {
 
@@ -242,12 +286,8 @@ img {
 		}
 
 		.portfolio-container {
-			/* flex-wrap: wrap; */
-			/* width: 100%; */
-			/* padding-bottom: 5%; */
-			max-width: 950px;
+			max-width: 95%;
 			margin: 0 auto;
-
 		}
 
 		.tagline {
@@ -273,6 +313,7 @@ img {
 			padding-left: 28%;
 			padding-right: 28%;
 		}
+
 
 	}
 }
