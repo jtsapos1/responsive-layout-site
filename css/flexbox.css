@@ -186,11 +186,27 @@ img {
 
 @media (max-width: 768px) {
 
-	li {
-		display: block;
-		background: #d9e4ea;
-
+	.one {
+		background-color: white;
+		max-width: 95%;
+		margin: 0 auto;
+		margin-bottom: 10px;
 	}
+
+	.two {
+		background-color: white;
+		max-width: 95%;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+
+	.three {
+		background-color: white;
+		max-width: 95%;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+
 
 	.bottom-nav {
 		display: none;
@@ -286,7 +302,7 @@ img {
 		}
 
 		.portfolio-container {
-			max-width: 95%;
+			max-width: 98%;
 			margin: 0 auto;
 		}
 
